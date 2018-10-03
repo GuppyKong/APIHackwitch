@@ -28,6 +28,15 @@ class SourcesViewController: UITableViewController {
         }
         loadError()
     }
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        <#code#>
+   
+   cellForRowAtIndexPath
+    
+    }
+    
+    
     func parse(json: JSON) {
         for result in json["sources"].arrayValue {
             let id = result["id"].stringValue
@@ -45,11 +54,6 @@ class SourcesViewController: UITableViewController {
         alert.addAction(UIAlertAction(title: "OK",
                                       style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
+    
     }
-    
-    
-    
-    
-    
-    
 }
